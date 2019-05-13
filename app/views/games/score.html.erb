@@ -1,0 +1,12 @@
+<h1>Play Word Game</h1>
+<p>Your Word Game score is...</p>
+<% if @included %>
+  <% if @english  %>
+  <p>Correct, this is an English word.</p>
+  <% else %>
+  <p>Sorry, this is not an English word.</p>
+  <% end %>
+<% else %>
+<p>Sorry, this word cannot be built from <%= @letters %>.</p>
+<% end %>
+<%= link_to "Play again?", new_path %>
